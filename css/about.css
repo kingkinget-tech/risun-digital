@@ -1,0 +1,550 @@
+/* ========================================
+   关于我们 & 联系我们 页面样式
+   ======================================== */
+
+/* 关于我们 - Banner */
+.about-banner {
+    background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0d2137 100%);
+}
+.contact-banner {
+    background: linear-gradient(135deg, #0a1628 0%, #1a3055 50%, #0d2137 100%);
+}
+
+/* 公司简介 */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.intro-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.intro-text h2 {
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 24px;
+}
+
+.intro-text p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* 统计数据 */
+.intro-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-light);
+}
+.ist-item { text-align: center; }
+.ist-num {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+}
+.ist-label {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-top: 6px;
+}
+
+/* 地图可视化 */
+.intro-card-main {
+    background: var(--bg-light);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    position: relative;
+}
+.ic-map {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.china-map-bg {
+    width: 100%;
+    height: 100%;
+}
+.map-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    animation: mapDotPulse 2s ease-in-out infinite;
+}
+.map-dot::after {
+    content: attr(data-city);
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 10px;
+    color: var(--text-secondary);
+    background: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transition: var(--transition);
+}
+.map-dot:hover::after { opacity: 1; }
+
+.md-beijing { top: 35%; left: 72%; background: var(--primary); }
+.md-xian { top: 45%; left: 52%; background: var(--accent); }
+.md-taiyuan { top: 42%; left: 62%; background: var(--accent-gold); }
+.md-chengdu { top: 55%; left: 40%; background: #6366F1; }
+.md-jinan { top: 42%; left: 76%; background: #22C55E; }
+.md-hohhot { top: 22%; left: 54%; background: #F59E0B; }
+
+@keyframes mapDotPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(200,16,46,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(200,16,46,0); }
+}
+
+/* 企业文化 */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.culture-card {
+    text-align: center;
+    padding: 40px 28px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+.culture-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+.culture-icon { font-size: 44px; margin-bottom: 18px; }
+.culture-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+.culture-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* 发展历程时间线 */
+.timeline {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.tl-item {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 36px;
+    position: relative;
+}
+.tl-item:last-child { margin-bottom: 0; }
+
+.tl-year {
+    flex-shrink: 0;
+    width: 80px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    padding-top: 2px;
+}
+.tl-item.current .tl-year { color: var(--accent); }
+
+.tl-content {
+    flex: 1;
+    padding: 18px 22px;
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    position: relative;
+}
+.tl-content::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 26px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    background: white;
+}
+.tl-item.current .tl-content::before { border-color: var(--accent); background: var(--accent); }
+
+.tl-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.tl-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+/* 资质荣誉 */
+.honors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.honor-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: 28px 22px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+.honor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+.honor-badge { font-size: 36px; margin-bottom: 12px; }
+.honor-card h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.honor-card span {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+/* 团队 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.team-card {
+    text-align: center;
+    padding: 36px 24px;
+    background: var(--bg-light);
+    border-radius: var(--radius-lg);
+}
+.team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-weight: 800;
+    font-size: 14px;
+    color: white;
+}
+.team-avatar.ceo { background: var(--gradient-primary); }
+.team-rd-stat { margin-bottom: 16px; }
+.rd-num {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+}
+.rd-label {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+}
+.team-partner-stat span {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-gold);
+    display: block;
+    margin-bottom: 8px;
+}
+.team-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.team-role {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   联系我们页面
+   ======================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-info-panel h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.contact-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.ci-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.ci-card {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+.ci-card:hover { box-shadow: var(--shadow-sm); }
+.ci-icon { font-size: 28px; flex-shrink: 0; }
+.ci-detail h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.ci-detail p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.ci-phone {
+    font-size: 18px !important;
+    font-weight: 700;
+    color: var(--primary) !important;
+}
+.qr-placeholder {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 16px 24px;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.contact-extra h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.offices-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.office-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+.office-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+}
+
+/* 表单面板 */
+.contact-form-panel {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-sm);
+}
+.contact-form h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.form-desc {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin-bottom: 28px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+.required { color: #EF4444; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    background: var(--bg-white);
+    transition: var(--transition);
+    outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0,102,255,0.08);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%23888' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 34px; }
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+.checkbox-label:hover { border-color: var(--primary); }
+.checkbox-label input[type="checkbox"] { accent-color: var(--primary); width: 15px; height: 15px; }
+.checkbox-label:has(input:checked) {
+    border-color: var(--primary);
+    background: rgba(0,102,255,0.04);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.form-submit-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+.form-note {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 14px;
+    text-align: center;
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition);
+}
+.faq-question:hover { color: var(--primary); }
+.faq-toggle {
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--text-tertiary);
+    transition: var(--transition);
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+.faq-item.active .faq-toggle { transform: rotate(45deg); color: var(--primary); }
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-answer p {
+    padding: 0 22px 18px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+.faq-item.active .faq-answer { max-height: 200px; }
+
+/* 响应式 */
+
+@media (max-width: 1024px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .culture-grid { grid-template-columns: 1fr; }
+    .honors-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+    .intro-stats { grid-template-columns: repeat(2, 1fr); }
+    .timeline::before { left: 40px; }
+    .tl-year { width: 40px; font-size: 17px; padding-right: 12px; text-align: right; }
+    .tl-content { padding: 14px 16px; }
+    .tl-content::before { left: -21px; top: 20px; width: 10px; height: 10px; }
+    .tl-item { gap: 16px; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-panel { padding: 28px 20px; }
+    .honors-grid { grid-template-columns: 1fr; }
+}

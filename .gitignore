@@ -1,0 +1,10 @@
+node_modules/
+.workbuddy/
+deploy*.js
+create-zip.js
+package-lock.json
+package.json
+DEPLOY*
+*.zip
+vercel.json
+_redirects

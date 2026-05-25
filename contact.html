@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 旭阳数科 | 免费咨询与方案定制</title>
+    <meta name="description" content="联系北京旭阳数字科技有限公司，获取免费的数字化诊断报告和定制化解决方案。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="旭阳数科" class="logo-img">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="products.html" class="nav-link">产品服务</a>
+                <a href="index.html#solutions" class="nav-link">解决方案</a>
+                <a href="about.html" class="nav-link">关于我们</a>
+                <a href="contact.html" class="nav-link active">联系我们</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="tel:18813061121" class="btn btn-primary btn-sm">📞 188-1306-1121</a>
+                <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面 Banner -->
+    <section class="page-banner contact-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>联系我们</h1>
+                <p>期待与您的每一次对话，开启数字化转型之旅</p>
+            </div>
+        </div>
+        <div class="banner-decoration"></div>
+    </section>
+
+    <!-- 联系方式 + 表单 -->
+    <section class="contact-main section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- 左侧：联系信息 -->
+                <div class="contact-info-panel">
+                    <h2>联系方式</h2>
+                    <p class="contact-subtitle">多种方式联系我们，选择最适合您的渠道</p>
+
+                    <div class="ci-cards">
+                        <div class="ci-card">
+                            <div class="ci-icon">📍</div>
+                            <div class="ci-detail">
+                                <h4>公司总部</h4>
+                                <p>北京市丰台区四合庄路1号旭阳大厦<br>（邮编：100070）</p>
+                            </div>
+                        </div>
+                        <div class="ci-card">
+                            <div class="ci-icon">📞</div>
+                            <div class="ci-detail">
+                                <h4>服务热线</h4>
+                                <p><a href="tel:18813061121" class="ci-phone">188-1306-1121</a><br>工作日 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="ci-card">
+                            <div class="ci-icon">📧</div>
+                            <div class="ci-detail">
+                                <h4>商务邮箱</h4>
+                                <p><a href="mailto:business@risun.com">business@risun.com</a><br>24小时内回复</p>
+                            </div>
+                        </div>
+                        <div class="ci-card">
+                            <div class="ci-icon">🌐</div>
+                            <div class="ci-detail">
+                                <h4>集团官网</h4>
+                                <p><a href="https://www.risun.com" target="_blank" style="color:var(--primary);font-weight:600">www.risun.com</a><br>了解更多旭阳集团信息</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-extra">
+                        <h4>全国服务网络</h4>
+                        <div class="offices-list">
+                            <div class="office-item"><span class="office-dot"></span>北京 · 总部 & 研发中心（管理 & 研发）</div>
+                            <div class="office-item"><span class="office-dot"></span>西安 · 研发中心（算法 & 平台）</div>
+                            <div class="office-item"><span class="office-dot"></span>成都 · 研发中心（高精定位）</div>
+                            <div class="office-item"><span class="office-dot"></span>石家庄 · 研发中心</div>
+                            <div class="office-item"><span class="office-dot"></span>太原 · 营销 & 交付中心（实施 & 服务）</div>
+                            <div class="office-item"><span class="office-dot"></span>济南 · 营销中心</div>
+                            <div class="office-item"><span class="office-dot"></span>呼和浩特 · 营销中心</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：表单 -->
+                <div class="contact-form-panel">
+                    <form class="contact-form" id="contactForm">
+                        <h3>获取免费诊断方案</h3>
+                        <p class="form-desc">填写以下信息，我们的顾问将在24小时内联系您</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">您的姓名 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">公司名称 <span class="required">*</span></label>
+                                <input type="text" id="company" name="company" placeholder="请输入公司全称" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">联系电话 <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="请输入手机号码" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">电子邮箱</label>
+                                <input type="email" id="email" name="email" placeholder="用于接收方案资料">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="industry">所属行业</label>
+                            <select id="industry" name="industry">
+                                <option value="">请选择行业</option>
+                                <option value="coal-chemical">煤化工 / 焦化</option>
+                                <option value="petrochemical">石油化工</option>
+                                <option value="fine-chemical">精细化工 / 新材料</option>
+                                <option value="power-energy">电力能源</option>
+                                <option value="mining">矿山开采</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">感兴趣的产品/方案（可多选）</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="mes"> 智能MES</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="coal"> 备煤数智化</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="twin"> 数字孪生</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="maintain"> 预测性维护</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="robot"> 巡检机器人</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="location"> 定位系统</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="full-solution"> 整体解决方案</label>
+                                <label class="checkbox-label"><input type="checkbox" name="products" value="consulting"> 咨询规划</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">需求描述</label>
+                            <textarea id="message" name="message" rows="4" placeholder="简单描述您当前的需求或遇到的问题..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                            提交申请 →
+                        </button>
+
+                        <p class="form-note">* 提交即表示您同意我们通过上述方式与您取得联系，您的信息将被严格保密。</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">常见问题</div>
+                <h2 class="section-title">你可能想知道的</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>从接触到项目上线一般需要多长时间？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>根据项目规模不同而异。标准产品部署（如单一MES模块）最快可在4-6周内完成；整体智慧工厂项目通常需要3-6个月。我们采用敏捷交付方式，分阶段上线，让客户尽早看到价值。基于旭阳集团30年的实战经验，我们的交付速度远超行业平均水平。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>能否对接我们已经使用的 ERP / DCS 等现有系统？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>完全可以。我们的产品提供标准的API接口和数据集成能力。在旭阳集团内部已成功对接SAP、用友等ERP系统，以及Honeywell、横河、浙大中控等主流DCS/PLC品牌。我们还提供专业的ERP咨询与实施服务（专注化工行业），可根据客户实际情况进行系统性规划。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>旭阳数科和市面上的通用IT厂商有什么区别？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>核心区别在于行业深度：我们只为能源化工行业服务，不做通用方案的搬运工。继承旭阳集团30年运营经验，我们深刻理解化工行业的业务底层逻辑——从销售、运输、生产、供应到财务、库存的全链条指标体系已梳理了700+项。这意味着我们的产品从设计之初就是为化工企业量身打造的。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>上线后如何保障系统的稳定运行？</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我们提供完整的售后保障体系：7×24小时技术支持热线、远程运维监控平台、定期巡检服务、版本升级维护。对于关键客户还可派驻现场工程师。同时所有产品均包含完善的操作培训和知识转移文档。作为旭阳集团旗下企业，我们拥有强大的持续服务保障能力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="旭阳数科" class="logo-img-footer">
+                    </div>
+                    <p class="footer-about">北京旭阳数字科技有限公司 — 能源化工行业优秀的数字化解决方案服务商。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>产品服务</h4>
+                    <ul>
+                        <li><a href="products.html#mes">智能生产执行(MES)</a></li>
+                        <li><a href="products.html#coal">备煤数智化系统</a></li>
+                        <li><a href="products.html#twin">数字孪生仿真</a></li>
+                        <li><a href="products.html#maintain">设备预测性维护</a></li>
+                        <li><a href="products.html#robot">智能巡检机器人</a></li>
+                        <li><a href="products.html#location">通感融合定位</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="about.html">公司介绍</a></li>
+                        <li><a href="about.html">企业文化</a></li>
+                        <li><a href="about.html">发展历程</a></li>
+                        <li><a href="about.html">资质荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>📍 北京市丰台区四合庄路1号旭阳大厦</li>
+                        <li>📞 188-1306-1121</li>
+                        <li>📧 business@risun.com</li>
+                        <li>🕐 工作日 9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京旭阳数字科技有限公司 版权所有 | <a href="https://www.risun.com" target="_blank">www.risun.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
