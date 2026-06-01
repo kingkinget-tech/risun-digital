@@ -173,6 +173,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========================================
+    // 新闻动态渲染
+    // ========================================
+    var newsGrid = document.getElementById('newsGrid');
+    if (newsGrid && typeof NEWS_DATA !== 'undefined') {
+        NEWS_DATA.forEach(function(news) {
+            var card = document.createElement('div');
+            card.className = 'news-card';
+            card.setAttribute('data-aos', 'fade-up');
+            card.innerHTML =
+                '<span class="news-date">' + news.date + '</span>' +
+                '<span class="news-location">' + news.location + '</span>' +
+                '<h3 class="news-title">' + news.title + '</h3>' +
+                '<p class="news-subtitle">' + news.subtitle + '</p>' +
+                '<p class="news-excerpt">' + news.summary + '</p>' +
+                '<a href="news-detail.html?id=' + news.id + '" class="news-link">查看详情 →</a>';
+            newsGrid.appendChild(card);
+        });
+    }
+
+    // ========================================
     // 能耗柱状图动画
     // ========================================
     var energyBars = document.querySelectorAll('.energy-bar');
